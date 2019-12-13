@@ -15,7 +15,6 @@ namespace BreachingDroneElite
 
         public Suspect(string Name, string Weapons, string Utility, string Priority)
         {
-            this._Priority = Priority
         }
     }
 }

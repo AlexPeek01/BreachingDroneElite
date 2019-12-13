@@ -128,3 +128,10 @@ C:\Users\alexp\OneDrive\Bureaublad\FHICT\Proftaak\Proftaak-Verdieping-S1\Breachi
 C:\Users\alexp\OneDrive\Bureaublad\FHICT\Proftaak\Proftaak-Verdieping-S1\BreachingDroneElite\BreachingDroneElite\obj\Debug\BreachingDroneElite.csproj.CopyComplete
 C:\Users\alexp\OneDrive\Bureaublad\FHICT\Proftaak\Proftaak-Verdieping-S1\BreachingDroneElite\BreachingDroneElite\obj\Debug\BreachingDroneElite.exe
 C:\Users\alexp\OneDrive\Bureaublad\FHICT\Proftaak\Proftaak-Verdieping-S1\BreachingDroneElite\BreachingDroneElite\obj\Debug\BreachingDroneElite.pdb
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.csprojAssemblyReference.cache
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\MainWindow.g.cs
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\App.g.cs
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite_MarkupCompile.cache
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite_MarkupCompile.lref
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.exe
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.pdb
