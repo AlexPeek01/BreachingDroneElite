@@ -47,13 +47,14 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Label Content="VIDEOFEED" HorizontalAlignment="Left" Margin="72,119,0,0" VerticalAlignment="Top" Width="191" Background="#FFBABABA" FontSize="36"/>
+        <Label x:Name="Label2" Content="VIDEOFEED" HorizontalAlignment="Left" Margin="72,119,0,0" VerticalAlignment="Top" Width="191" Background="#FFBABABA" FontSize="36"/>
         <ListBox HorizontalAlignment="Left" Height="100" Margin="316,501,0,0" VerticalAlignment="Top" Width="100">
             <Button Content="Gun shots"/>
             <Button Content="Mic"/>
             <Button />
             <Button/>
         </ListBox>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="294,372,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
 
 

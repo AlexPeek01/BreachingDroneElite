@@ -37,6 +37,8 @@ namespace BreachingDroneElite
         public MainWindow()
         {
             InitializeComponent();
+            Suspect Laden = new Suspect("Bin Laden ", "Stick ", "Shield ", "Delta ");
+            System.Windows.MessageBox.Show(Laden.Name + Laden.Utility + Laden.Weapon + Laden.priority);
 
         }
 

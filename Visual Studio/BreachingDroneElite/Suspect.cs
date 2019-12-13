@@ -11,10 +11,59 @@ namespace BreachingDroneElite
         private string _Name;
         private string _Weapon;
         private string _Utility;
-        enum _Priority {Alpha, Bravo, Charlie, Delta};
+        private string _Priority;
+        //public enum _Priority {Alpha, Bravo, Charlie, Delta};
 
-        public Suspect(string Name, string Weapons, string Utility, string Priority)
+        public Suspect(string Name, string Weapon, string Utility, string priority)
         {
+            this._Name = Name;
+            this._Weapon = Weapon;
+            this._Utility = Utility;
+            this._Priority = priority;
+        }
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                _Name = value;
+            }
+        }
+        public string Weapon
+        {
+            get
+            {
+                return _Weapon;
+            }
+            set
+            {
+                _Weapon = value;
+            }
+        }
+        public string Utility
+        {
+            get
+            {
+                return _Utility;
+            }
+            set
+            {
+                _Utility = value;
+            }
+        }
+        public string priority
+        {
+            get
+            {
+                return _Priority;
+            }
+            set
+            {
+                _Priority = value;
+            }
         }
     }
 }
