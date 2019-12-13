@@ -10,6 +10,7 @@ namespace BreachingDroneElite
     {
         string Name;
         string Rank;
+        string Age;
         List<string> Weapons = new List<string>();
         List<string> Utility = new List<string>();
     }
