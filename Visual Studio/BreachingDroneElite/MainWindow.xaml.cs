@@ -72,6 +72,11 @@ namespace BreachingDroneElite
             ProcessFrame();
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("python FaceRec.py");
+        }
+
         private void ProcessFrame()
         {
             Frame = camera.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);

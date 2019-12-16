@@ -27,7 +27,7 @@
             <wf:PictureBox x:Name="PicBox"/>
 
         </WindowsFormsHost>
-        <Button Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Button Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click_1"/>
         <Button Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
         <Button Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
         <Button Content="Override Controls" HorizontalAlignment="Left" Margin="113,389,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
