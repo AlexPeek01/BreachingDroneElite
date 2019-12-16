@@ -10,5 +10,6 @@ namespace BreachingDroneElite
     {
         string FloorNum;
         int RoomCount;
+        string cuntybastard; 
     }
 }
