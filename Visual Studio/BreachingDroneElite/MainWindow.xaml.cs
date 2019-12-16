@@ -75,6 +75,7 @@ namespace BreachingDroneElite
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("python FaceRec.py");
+
         }
 
         private void ProcessFrame()
