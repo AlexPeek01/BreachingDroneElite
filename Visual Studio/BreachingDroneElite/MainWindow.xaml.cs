@@ -37,9 +37,6 @@ namespace BreachingDroneElite
         public MainWindow()
         {
             InitializeComponent();
-            Suspect Laden = new Suspect("Bin Laden ", "Stick ", "Shield ", "Delta ");
-            System.Windows.MessageBox.Show(Laden.Name + Laden.Utility + Laden.Weapon + Laden.priority);
-
         }
 
         private void Capture_Click(object sender, RoutedEventArgs e)
@@ -73,6 +70,11 @@ namespace BreachingDroneElite
             camera = new Capture();
             camera.QueryFrame();
             ProcessFrame();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("python FaceRec.py");
         }
 
         private void ProcessFrame()
