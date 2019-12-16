@@ -12,7 +12,7 @@ namespace BreachingDroneElite
         private string _Rank;
         private string _Weapon;
         private string _Utility;
-        //Test for github 11:12
+        //Test for github 11:24
 
         public Operator(string Name, string Rank, string Weapon, string Utility)
         {
