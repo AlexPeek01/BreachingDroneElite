@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 //Danillo Perez
 namespace BreachingDroneElite
 {
-    //10:32
     class Room
     {
         string _RoomName;
