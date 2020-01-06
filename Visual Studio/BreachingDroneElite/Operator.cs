@@ -20,7 +20,9 @@ namespace BreachingDroneElite
             this._Rank = Rank;
             this._Weapon = Weapon;
             this._Utility = Utility;
+
         }
+        Operator Henk = new Operator("Henk", "Cpl", "ar-15", "breachingtool");
         public string Name
         {
             get
