@@ -20,6 +20,11 @@ namespace BreachingDroneElite
             this._Injuries = Injuries;
             this._Additional_Info = Info;
             }
+        public Civilian(string Injuries, string Info)
+        {
+            this._Injuries = Injuries;
+            this._Additional_Info = Info;
+        }
         public string Gender
         {
             get

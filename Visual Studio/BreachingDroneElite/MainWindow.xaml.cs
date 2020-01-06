@@ -57,23 +57,22 @@ namespace BreachingDroneElite
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            try
+            {
+                BitmapImage _image = new BitmapImage();
+                _image.BeginInit();
+                _image.CacheOption = BitmapCacheOption.None;
+                _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
+                _image.CacheOption = BitmapCacheOption.OnLoad;
+                _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+                _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
+                _image.EndInit();
+                imagebox.Source = _image;
+            }
+            catch (IOException)
+            {
 
-                try
-                {
-                    BitmapImage _image = new BitmapImage();
-                    _image.BeginInit();
-                    _image.CacheOption = BitmapCacheOption.None;
-                    _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
-                    _image.CacheOption = BitmapCacheOption.OnLoad;
-                    _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
-                    _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
-                    _image.EndInit();
-                    imagebox.Source = _image;
-                }
-                catch (IOException)
-                {
-
-                }
+            }
 
 
 

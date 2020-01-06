@@ -2,36 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f04f78-bd36-4e5b-bf78-bc40b480a026" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FaceRec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FaceRec.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/face detect" beforeDir="false" afterPath="$PROJECT_DIR$/venv/face detect" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/BreachingDroneElite.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/BreachingDroneElite.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Visual Studio/.vs/BreachingDroneElite/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/Operator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/Operator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/bin/Debug/BreachingDroneElite.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.i.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/BreachingDroneElite_MarkupCompile.i.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/BreachingDroneElite/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Visual Studio/Images/Frame.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Visual Studio/Images/Frame.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,22 +140,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="673" y="305" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576579029306" />
-    <state width="1515" height="115" key="GridCell.Tab.0.bottom" timestamp="1576675923528">
+    <state width="1515" height="115" key="GridCell.Tab.0.bottom" timestamp="1578300192540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576675923528" />
-    <state width="1515" height="115" key="GridCell.Tab.0.center" timestamp="1576675923527">
+    <state width="1515" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578300192540" />
+    <state width="1515" height="115" key="GridCell.Tab.0.center" timestamp="1578300192540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576675923527" />
-    <state width="1515" height="115" key="GridCell.Tab.0.left" timestamp="1576675923527">
+    <state width="1515" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578300192540" />
+    <state width="1515" height="115" key="GridCell.Tab.0.left" timestamp="1578300192540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576675923527" />
-    <state width="1515" height="115" key="GridCell.Tab.0.right" timestamp="1576675923527">
+    <state width="1515" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578300192540" />
+    <state width="1515" height="115" key="GridCell.Tab.0.right" timestamp="1578300192540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576675923527" />
+    <state width="1515" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578300192540" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1576578787361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -193,13 +172,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1576578787361" />
-    <state x="277" y="54" key="SettingsEditor" timestamp="1576598860140">
+    <state x="277" y="54" key="SettingsEditor" timestamp="1578299727457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576598860140" />
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1576675891466">
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578299727457" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1578299016057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576675891466" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578299016057" />
   </component>
 </project>

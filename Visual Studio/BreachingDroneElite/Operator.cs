@@ -19,6 +19,12 @@ namespace BreachingDroneElite
             this._Weapon = Weapon;
             this._Utility = Utility;
         }
+
+        public Operator(string Name, string Rank)
+        {
+            this._Name = Name;
+            this._Rank = Rank;
+        }
         public string Name
         {
             get
