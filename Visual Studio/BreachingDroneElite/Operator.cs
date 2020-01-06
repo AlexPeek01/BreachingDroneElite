@@ -12,17 +12,19 @@ namespace BreachingDroneElite
         private string _Rank;
         private string _Weapon;
         private string _Utility;
-        //Test for github 11:24
-
         public Operator(string Name, string Rank, string Weapon, string Utility)
         {
             this._Name = Name;
             this._Rank = Rank;
             this._Weapon = Weapon;
             this._Utility = Utility;
-
         }
-        Operator Henk = new Operator("Henk", "Cpl", "ar-15", "breachingtool");
+
+        public Operator(string Name, string Rank)
+        {
+            this._Name = Name;
+            this._Rank = Rank;
+        }
         public string Name
         {
             get

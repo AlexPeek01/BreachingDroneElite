@@ -16,80 +16,82 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-
+using System.IO;
+using System.Drawing;
+using System.Windows.Threading;
+using System.Net.Cache;
+using System.Data;
+using Npgsql;
+using System.Diagnostics;
 
 namespace BreachingDroneElite
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        //MCvFont font = new MCvFont(Emgu.CV.CvEnum.FONT.CV_FONT_HERSHEY_TRIPLEX, 0.5, 0.5);
-        HaarCascade faceDetected;
-        Image<Bgr, Byte> Frame;
-        Capture camera;
-        Image<Gray, byte> result;
-        Image<Gray, byte> TrainedFace = null;
-        Image<Gray, byte> grayFace = null;
-        List<Image<Gray, byte>> trainingImages = new List<Image<Gray, byte>>();
-        int Count, t;
+        private DataSet ds = new DataSet();
+        private DataTable dt = new DataTable();
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void Capture_Click(object sender, RoutedEventArgs e)
+        private void llOpenConnAndSelect_LinkClicked(object sender,
+                     LinkLabelLinkClickedEventArgs e)
         {
-            grayFace = camera.QueryGrayFrame().Resize(480, 360, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-            MCvAvgComp[][] DetectedFaces = grayFace.DetectHaarCascade(faceDetected, 2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new System.Drawing.Size(20, 20));
-            foreach (MCvAvgComp f in DetectedFaces[0])
+            try
             {
-                TrainedFace = Frame.Copy(f.rect).Convert<Gray, byte>();
-                break;
+                string connstring = String.Format("Server={0};Port={1};" +
+                    "User Id={2};Password={3};Database={4};");
+                NpgsqlConnection conn = new NpgsqlConnection(connstring);
+                conn.Open();
+                string sql = "SELECT * FROM simple_table";
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
+                ds.Reset();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+                conn.Close();
             }
-            TrainedFace = result.Resize(100, 100, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-            trainingImages.Add(TrainedFace);
-            for (int i = 1; i < trainingImages.ToArray().Length + 1; i++)
+            catch (Exception msg)
             {
-                //trainingImages.ToArray()[i - 1].Save(Application.StartupPath + "/Faces/face" + i + ".bmp");
+                throw;
             }
         }
-
-        private void WindowsFormsHost_ChildChanged(object sender, ChildChangedEventArgs e)
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            try
+            {
+                BitmapImage _image = new BitmapImage();
+                _image.BeginInit();
+                _image.CacheOption = BitmapCacheOption.None;
+                _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
+                _image.CacheOption = BitmapCacheOption.OnLoad;
+                _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+                _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
+                _image.EndInit();
+                imagebox.Source = _image;
+            }
+            catch (IOException)
+            {
 
-        }
+            }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            camera = new Capture();
-            camera.QueryFrame();
-            ProcessFrame();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("python FaceRec.py");
-
         }
 
-        private void ProcessFrame()
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            Frame = camera.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-            grayFace = Frame.Convert<Gray, byte>();
-            MCvAvgComp[][] facesDetectedNow = grayFace.DetectHaarCascade(faceDetected, 1.1, 2, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new System.Drawing.Size(20, 20));
-            foreach (MCvAvgComp f in facesDetectedNow[0])
-            {
-                result = Frame.Copy(f.rect).Convert<Gray, Byte>().Resize(100, 100, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
-                Frame.Draw(f.rect, new Bgr(), 1);
-            }
-            PicBox.Image = Frame.Bitmap;
-            
+            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+            dispatcherTimer.Start();
         }
     }
 }

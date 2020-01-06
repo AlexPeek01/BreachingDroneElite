@@ -23,6 +23,12 @@ namespace BreachingDroneElite
             this._Priority = priority;
             this._Additional_Information = info;
         }
+        public Suspect(string Name, string priority, string info)
+        {
+            this._Name = Name;
+            this._Priority = priority;
+            this._Additional_Information = info;
+        }
         public string Name
         {
             get
