@@ -4,6 +4,7 @@ import PIL
 import os
 import time
 import base64
+import urllib 
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
@@ -11,7 +12,8 @@ russianplate_cascade = cv2.CascadeClassifier('haarcascade_russian_plate_number.x
 clock_cascade = cv2.CascadeClassifier('haarcascade_wallclock.xml')
 fullbody_cascade = cv2.CascadeClassifier('haarcascade_fullbody.xml')
 
-cap = cv2.VideoCapture(0)
+cap = urllib.urlopen('http://192.168.137.246:8000/index.html')
+#cap = cv2.VideoCapture(0)
 while 1:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
