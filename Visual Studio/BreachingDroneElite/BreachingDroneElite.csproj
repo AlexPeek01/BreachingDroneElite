@@ -127,6 +127,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Civilian.cs" />
+    <Compile Include="DataLayer.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Suspect.cs" />

@@ -23,39 +23,40 @@ using System.Net.Cache;
 using System.Data;
 using Npgsql;
 using System.Diagnostics;
-//test
+
 namespace BreachingDroneElite
 {
     public partial class MainWindow : Window
     {
-        private DataSet ds = new DataSet();
-        private DataTable dt = new DataTable();
+        int savedImageCount = 0;
         public MainWindow()
         {
             InitializeComponent();
         }
-        private void llOpenConnAndSelect_LinkClicked(object sender,
-                     LinkLabelLinkClickedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string connstring = String.Format("Server={0};Port={1};" +
-                    "User Id={2};Password={3};Database={4};");
-                NpgsqlConnection conn = new NpgsqlConnection(connstring);
-                conn.Open();
-                string sql = "SELECT * FROM simple_table";
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-                ds.Reset();
-                da.Fill(ds);
-                dt = ds.Tables[0];
-                conn.Close();
-            }
-            catch (Exception msg)
-            {
-                throw;
-            }
+            DeleteImages();
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            TimerStart();
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            TimerTick();
+        }
+        private void TimerStart()
+        {
+            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+            dispatcherTimer.Start();
+        }
+        public void TimerTick()
         {
             try
             {
@@ -69,29 +70,32 @@ namespace BreachingDroneElite
                 _image.EndInit();
                 imagebox.Source = _image;
             }
-            catch (IOException)
+            catch (IOException) { }
+        }
+
+        private void CaptureButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveImage();
+        }
+        private void SaveImage()
+        {
+            try
             {
-
+                System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
+                savedImageCount++;
             }
-
-
-
+            catch
+            {
+                savedImageCount++;
+            }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void DeleteImages()
         {
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void Window_Loaded_1(object sender, RoutedEventArgs e)
-        {
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
-            dispatcherTimer.Start();
+            for (int i = 0; i <= savedImageCount; i++)
+            {
+                File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
+            }
+            savedImageCount = 0;
         }
     }
 }
