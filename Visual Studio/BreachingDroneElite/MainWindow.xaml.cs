@@ -49,6 +49,10 @@ namespace BreachingDroneElite
         {
             TimerTick();
         }
+        private void CaptureButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveImage();
+        }
         private void TimerStart()
         {
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
@@ -71,11 +75,6 @@ namespace BreachingDroneElite
                 imagebox.Source = _image;
             }
             catch (IOException) { }
-        }
-
-        private void CaptureButton_Click(object sender, RoutedEventArgs e)
-        {
-            SaveImage();
         }
         private void SaveImage()
         {
