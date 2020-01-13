@@ -112,5 +112,10 @@ namespace BreachingDroneElite
             }
             savedImageCount = 0;
         }
+
+        private void CNFRM_BTN(object sender, RoutedEventArgs e)
+        {
+            DataLayer.SQLQuery(textbox1.Text);
+        }
     }
 }
