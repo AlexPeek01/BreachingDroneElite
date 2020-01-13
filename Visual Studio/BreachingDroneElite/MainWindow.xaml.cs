@@ -28,7 +28,12 @@ namespace BreachingDroneElite
 {
     public partial class MainWindow : Window
     {
-        int savedImageCount = 0;
+        private int ID = 0;
+        private string Naam = "Unknown";
+        private int Team;
+        private int savedImageCount = 100;
+        DataLayer dl = new DataLayer();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -76,12 +81,23 @@ namespace BreachingDroneElite
             }
             catch (IOException) { }
         }
+
         private void SaveImage()
         {
+            ID = 7;
+            Naam = "Björn";
+            Team = 1;
             try
             {
+                byte[] imageArray = System.IO.File.ReadAllBytes(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg");
+                string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                string imageString = base64ImageRepresentation;
                 System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
+                //DataLayer.SQLQuery();
+                 DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
+                                   "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + "imgstring" + "')");
                 savedImageCount++;
+                DataLayer.SQLQuery("SELECT * FROM face");
             }
             catch
             {

@@ -3,12 +3,9 @@ import cv2
 import PIL
 import os
 import time
+import base64
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-russianplate_cascade = cv2.CascadeClassifier('haarcascade_russian_plate_number.xml')
-clock_cascade = cv2.CascadeClassifier('haarcascade_wallclock.xml')
-fullbody_cascade = cv2.CascadeClassifier('haarcascade_fullbody.xml')
 
 img_path = 'http://192.168.137.246:8000/stream.mjpg'
 #cap = cv2.VideoCapture(img_path)

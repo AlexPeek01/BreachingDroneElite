@@ -212,3 +212,10 @@ C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Brea
 C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\System.Text.Json.xml
 C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\System.ValueTuple.xml
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\Google.Protobuf.dll
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\MySql.Data.dll
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\Renci.SshNet.dll
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\Google.Protobuf.xml
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\MySql.Data.xml
+C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\BreachingDroneElite\bin\Debug\Renci.SshNet.xml
