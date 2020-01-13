@@ -112,10 +112,5 @@ namespace BreachingDroneElite
             }
             savedImageCount = 0;
         }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            DataLayer.SQLQuery(textbox1.Text);
-        }
     }
 }
