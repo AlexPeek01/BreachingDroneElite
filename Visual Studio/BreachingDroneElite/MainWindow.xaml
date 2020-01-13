@@ -43,12 +43,6 @@
             <Button/>
         </ListBox>
         <Image x:Name="imagebox" HorizontalAlignment="Left" Height="206" Margin="27,38,0,0" VerticalAlignment="Top" Width="297"/>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="350,254,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
-
-
-
-
     </Grid>
 
 </Window>

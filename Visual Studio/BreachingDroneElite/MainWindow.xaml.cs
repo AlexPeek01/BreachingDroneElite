@@ -93,9 +93,7 @@ namespace BreachingDroneElite
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
                 string imageString = base64ImageRepresentation;
                 System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
-                //DataLayer.SQLQuery();
-                 DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
-                                   "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + "imgstring" + "')");
+                DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " + "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + "imgstring" + "')");
                 savedImageCount++;
                 DataLayer.SQLQuery("SELECT * FROM face");
             }
@@ -111,6 +109,10 @@ namespace BreachingDroneElite
                 File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
             }
             savedImageCount = 0;
+        }
+
+        private void CnfrmBtn(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
