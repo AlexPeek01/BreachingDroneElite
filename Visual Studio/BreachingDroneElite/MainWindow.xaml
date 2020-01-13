@@ -9,23 +9,16 @@
         
        
        
-        Title="Breaching Drone Elite 1.0" Height="650" Width="500" Loaded="Window_Loaded_1">
-    <Grid x:Name="BreachingDroneElite">
+        Title="Breaching Drone Elite 1.0" Height="401.3" Width="500" Loaded="Window_Loaded_1">
+    <Grid x:Name="BreachingDroneElite" Margin="0,0,-0.4,0">
         <Grid.Background>
             <ImageBrush ImageSource="https://i.gyazo.com/a5d0f9a2420474e065434995d9db7b7e.png" Stretch="UniformToFill" Opacity="0.99"/>
         </Grid.Background>
-        <Button Content="Capture photo (C)" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
-        <Button Content="B D E" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click"/>
+        <Button x:Name="CaptureButton" Content="Capture photo (C)" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="CaptureButton_Click"/>
+        <Button x:Name="ClearImagesButton" Content="B D E" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click"/>
         <Button Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click_1"/>
-        <Button Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="Override Controls" HorizontalAlignment="Left" Margin="113,389,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
-        <Button Content="up" HorizontalAlignment="Left" Margin="137,475,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="down" HorizontalAlignment="Left" Margin="137,524,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="right" HorizontalAlignment="Left" Margin="187,524,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="left" HorizontalAlignment="Left" Margin="87,524,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Foreground="Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="470,600,0,0" TextWrapping="Wrap" Text="AIG" VerticalAlignment="Top"/>
-        <Button Content="Jump" HorizontalAlignment="Left" Margin="113,579,0,0" VerticalAlignment="Top" Height="31" Width="100"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="-15,318,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>
@@ -36,14 +29,9 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="316,501,0,0" VerticalAlignment="Top" Width="100">
-            <Button Content="Gun shots"/>
-            <Button Content="Mic"/>
-            <Button />
-            <Button/>
-        </ListBox>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="294,372,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Image x:Name="imagebox" HorizontalAlignment="Left" Height="206" Margin="27,38,0,0" VerticalAlignment="Top" Width="297"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="350,254,0,0" TextWrapping="Wrap" Text="SELECT * FROM face" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="375,225,0,0" Click="Button_Click_2"/>
 
 
 
