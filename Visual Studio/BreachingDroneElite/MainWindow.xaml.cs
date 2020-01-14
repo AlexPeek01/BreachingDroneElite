@@ -28,11 +28,8 @@ namespace BreachingDroneElite
 {
     public partial class MainWindow : Window
     {
-        private int ID = 0;
-        private string Naam = "Unknown";
         private int Team;
         private int savedImageCount = 0;
-        DataLayer dl = new DataLayer();
 
         public MainWindow()
         {
@@ -48,7 +45,7 @@ namespace BreachingDroneElite
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            TimerStart();
+            Startup();
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
@@ -58,12 +55,18 @@ namespace BreachingDroneElite
         {
             SaveImage();
         }
-        private void TimerStart()
+        private void Startup()
         {
+            int fileCount = Directory.GetFiles(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images").Length;
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
             dispatcherTimer.Start();
+            for (int i = 0; i <= fileCount - 1; i++)
+            {
+                File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
+            }
+            savedImageCount = 0;
         }
         public void TimerTick()
         {
@@ -84,18 +87,18 @@ namespace BreachingDroneElite
 
         private void SaveImage()
         {
-            ID = DataLayer.GetUserCount() + 1;
-            Naam = "Danillo";
+            int ID = DataLayer.UserCount + 1;
+            string Naam = "Unknown";
             try
             {
                 byte[] imageArray = System.IO.File.ReadAllBytes(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg");
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
                 string imageString = base64ImageRepresentation;
                 System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
-                 DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
+                DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
                                    "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + imageString + "')");
                 savedImageCount++;
-                DataLayer.SQLQuery("SELECT Count(img) FROM face");
+                DataLayer.SQLQuery("SELECT * FROM face");
             }
             catch
             {

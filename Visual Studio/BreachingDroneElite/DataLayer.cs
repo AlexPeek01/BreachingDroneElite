@@ -13,9 +13,8 @@ namespace BreachingDroneElite
 {
     class DataLayer
     {
-        private DataSet ds = new DataSet();
-        private DataTable dt = new DataTable();
-        public static string SQLQuery(string query)
+        public static int UserCount;
+        public static void SQLQuery(string query)
         {
             string connStr = "server=192.168.12.10;user=root;database=facedb;port=3306;password=TheytoOkEr4Jobs!";
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -31,8 +30,9 @@ namespace BreachingDroneElite
                 {
                     Console.WriteLine(rdr.GetInt32(0) + " -- " + rdr.GetString(1) + " -- "  + rdr.GetString(3));
                 }
+                UserCount = rdr.GetInt32(0);
                 rdr.Close();
-                return Convert.ToString(rdr);
+
             }
             catch (Exception ex)
             {
@@ -40,15 +40,10 @@ namespace BreachingDroneElite
             }
             conn.Close();
             Console.WriteLine("Done.");
-            return "";
         }
         private void llOpenConnAndSelect_LinkClicked(object sender,
              LinkLabelLinkClickedEventArgs e)
         {
-        }
-        public static int GetUserCount()
-        {
-            return Convert.ToInt32 ( SQLQuery("SELECT MAX (id) FROM face"));
         }
     }
 }
