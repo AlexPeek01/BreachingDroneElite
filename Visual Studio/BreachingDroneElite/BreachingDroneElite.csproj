@@ -147,6 +147,8 @@
     </ApplicationDefinition>
     <Compile Include="Civilian.cs" />
     <Compile Include="DataLayer.cs" />
+    <Compile Include="File_Services.cs" />
+    <Compile Include="MediaControl.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Suspect.cs" />

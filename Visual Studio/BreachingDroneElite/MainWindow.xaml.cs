@@ -29,8 +29,7 @@ namespace BreachingDroneElite
     public partial class MainWindow : Window
     {
         private int team;
-        private int savedImageCount = 0;
-        private int pauseCheck = 1;
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         public MainWindow()
         {
@@ -38,101 +37,47 @@ namespace BreachingDroneElite
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DeleteImages();
+            File_Services.DeleteFile();
         }
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             Startup();
+            File_Services.DeleteFile();
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            TimerTick();
+            File_Services.ImageInit();
+            imagebox.Source = File_Services.finalImage;
+
         }
         private void CaptureButton_Click(object sender, RoutedEventArgs e)
         {
-            SaveImage();
+            File_Services.SaveImage();
         }
         private void CNFRM_BTN(object sender, RoutedEventArgs e)
         {
             DataLayer.SQLQuery(textbox1.Text);
         }
-
         private void Stop_BTN_Click(object sender, RoutedEventArgs e)
         {
             imagebox.Visibility = Visibility.Hidden;
-            pauseCheck = 0;
+            dispatcherTimer.Stop();
         }
-
         private void Start_BTN_Click(object sender, RoutedEventArgs e)
         {
             imagebox.Visibility = Visibility.Visible;
-            pauseCheck = 1;
+            dispatcherTimer.Start();
         }
-
         private void Pause_BTN_Click(object sender, RoutedEventArgs e)
         {
-            pauseCheck *= -1;
+            dispatcherTimer.Stop();
         }
         public void Startup()
         {
-            int fileCount = Directory.GetFiles(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images").Length;
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 30);
             dispatcherTimer.Start();
-            for (int i = 0; i <= fileCount - 1; i++)
-            {
-                File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
-            }
-            savedImageCount = 0;
-        }
-        private void TimerTick()
-        {
-            if (pauseCheck == 1)
-            {
-                try
-                {
-                    BitmapImage _image = new BitmapImage();
-                    _image.BeginInit();
-                    _image.CacheOption = BitmapCacheOption.None;
-                    _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
-                    _image.CacheOption = BitmapCacheOption.OnLoad;
-                    _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
-                    _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
-                    _image.EndInit();
-                    imagebox.Source = _image;
-                }
-                catch (IOException) { }
-            }
-        }
-
-        private void SaveImage()
-        {
-            int id = DataLayer.userCount + 1;
-            string naam = "Unknown";
-            try
-            {
-                byte[] imageArray = System.IO.File.ReadAllBytes(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg");
-                string base64ImageRepresentation = Convert.ToBase64String(imageArray);
-                string imageString = base64ImageRepresentation;
-                System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
-                DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
-                                   "VALUES('" + id + "', '" + naam + "', '" + team + "', '" + imageString + "')");
-                savedImageCount++;
-                DataLayer.SQLQuery("SELECT * FROM face");
-            }
-            catch
-            {
-                savedImageCount++;
-            }
-        }
-        private void DeleteImages()
-        {
-            for (int i = 0; i <= savedImageCount; i++)
-            {
-                File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
-            }
-            savedImageCount = 0;
+            File_Services.DeleteFile();
         }
     }
 }
