@@ -16,9 +16,9 @@
         </Grid.Background>
         <Button x:Name="CaptureButton" Content="Capture photo (C)" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="CaptureButton_Click"/>
         <Button x:Name="ClearImagesButton" Content="B D E" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click"/>
-        <Button Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click_1"/>
-        <Button Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Foreground="Black"/>
+        <Button x:Name="Start_BTN" Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Start_BTN_Click"/>
+        <Button x:Name="Pause_BTN" Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Pause_BTN_Click"/>
+        <Button x:Name="Stop_BTN" Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Foreground="Black" Click="Stop_BTN_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="470,600,0,0" TextWrapping="Wrap" Text="AIG" VerticalAlignment="Top"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="-15,318,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>

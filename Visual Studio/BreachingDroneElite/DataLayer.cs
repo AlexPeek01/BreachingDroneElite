@@ -13,7 +13,7 @@ namespace BreachingDroneElite
 {
     class DataLayer
     {
-        public static int UserCount;
+        public static int userCount;
         public static void SQLQuery(string query)
         {
             string connStr = "server=192.168.12.10;user=root;database=facedb;port=3306;password=TheytoOkEr4Jobs!";
@@ -30,7 +30,7 @@ namespace BreachingDroneElite
                 {
                     Console.WriteLine(rdr.GetInt32(0) + " -- " + rdr.GetString(1) + " -- "  + rdr.GetString(3));
                 }
-                UserCount = rdr.GetInt32(0);
+                userCount = rdr.GetInt32(0);
                 rdr.Close();
 
             }

@@ -28,8 +28,9 @@ namespace BreachingDroneElite
 {
     public partial class MainWindow : Window
     {
-        private int Team;
+        private int team;
         private int savedImageCount = 0;
+        private int pauseCheck = 1;
 
         public MainWindow()
         {
@@ -39,10 +40,6 @@ namespace BreachingDroneElite
         {
             DeleteImages();
         }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             Startup();
@@ -55,7 +52,28 @@ namespace BreachingDroneElite
         {
             SaveImage();
         }
-        private void Startup()
+        private void CNFRM_BTN(object sender, RoutedEventArgs e)
+        {
+            DataLayer.SQLQuery(textbox1.Text);
+        }
+
+        private void Stop_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            imagebox.Visibility = Visibility.Hidden;
+            pauseCheck = 0;
+        }
+
+        private void Start_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            imagebox.Visibility = Visibility.Visible;
+            pauseCheck = 1;
+        }
+
+        private void Pause_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            pauseCheck *= -1;
+        }
+        public void Startup()
         {
             int fileCount = Directory.GetFiles(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images").Length;
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
@@ -68,27 +86,30 @@ namespace BreachingDroneElite
             }
             savedImageCount = 0;
         }
-        public void TimerTick()
+        private void TimerTick()
         {
-            try
+            if (pauseCheck == 1)
             {
-                BitmapImage _image = new BitmapImage();
-                _image.BeginInit();
-                _image.CacheOption = BitmapCacheOption.None;
-                _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
-                _image.CacheOption = BitmapCacheOption.OnLoad;
-                _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
-                _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
-                _image.EndInit();
-                imagebox.Source = _image;
+                try
+                {
+                    BitmapImage _image = new BitmapImage();
+                    _image.BeginInit();
+                    _image.CacheOption = BitmapCacheOption.None;
+                    _image.UriCachePolicy = new RequestCachePolicy(RequestCacheLevel.BypassCache);
+                    _image.CacheOption = BitmapCacheOption.OnLoad;
+                    _image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+                    _image.UriSource = new Uri(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", UriKind.RelativeOrAbsolute);
+                    _image.EndInit();
+                    imagebox.Source = _image;
+                }
+                catch (IOException) { }
             }
-            catch (IOException) { }
         }
 
         private void SaveImage()
         {
-            int ID = DataLayer.UserCount + 1;
-            string Naam = "Unknown";
+            int id = DataLayer.userCount + 1;
+            string naam = "Unknown";
             try
             {
                 byte[] imageArray = System.IO.File.ReadAllBytes(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg");
@@ -96,7 +117,7 @@ namespace BreachingDroneElite
                 string imageString = base64ImageRepresentation;
                 System.IO.File.Move("C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg", "C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame" + savedImageCount + ".jpg");
                 DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
-                                   "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + imageString + "')");
+                                   "VALUES('" + id + "', '" + naam + "', '" + team + "', '" + imageString + "')");
                 savedImageCount++;
                 DataLayer.SQLQuery("SELECT * FROM face");
             }
@@ -112,11 +133,6 @@ namespace BreachingDroneElite
                 File.Delete(@"C:\Users\alexp\OneDrive\Documenten\GitHub\BreachingDroneElite\Visual Studio\Images\Frame" + i + ".jpg");
             }
             savedImageCount = 0;
-        }
-
-        private void CNFRM_BTN(object sender, RoutedEventArgs e)
-        {
-            DataLayer.SQLQuery(textbox1.Text);
         }
     }
 }
