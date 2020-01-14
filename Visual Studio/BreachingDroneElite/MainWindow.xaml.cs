@@ -84,8 +84,8 @@ namespace BreachingDroneElite
 
         private void SaveImage()
         {
-            ID = 0;
-            Naam = "Alex";
+            ID = DataLayer.GetUserCount() + 1;
+            Naam = "Danillo";
             try
             {
                 byte[] imageArray = System.IO.File.ReadAllBytes(@"C:/Users/alexp/OneDrive/Documenten/GitHub/BreachingDroneElite/Visual Studio/Images/Frame.jpg");

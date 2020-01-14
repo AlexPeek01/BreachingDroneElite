@@ -46,6 +46,10 @@ namespace BreachingDroneElite
              LinkLabelLinkClickedEventArgs e)
         {
         }
+        public static int GetUserCount()
+        {
+            return Convert.ToInt32 ( SQLQuery("SELECT MAX (id) FROM face"));
+        }
     }
 }
 
