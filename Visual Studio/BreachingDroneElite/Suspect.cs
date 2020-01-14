@@ -21,6 +21,9 @@ namespace BreachingDroneElite
             this._Utility = Utility;
             this._Priority = priority;
             this._Additional_Information = info;
+
+            Suspect henk = new Suspect("henk","m4a1","grenades","3","likes to overendulge on snacks");
+
         }
         public Suspect(string Name, string priority, string info)
         {
@@ -83,5 +86,6 @@ namespace BreachingDroneElite
                 _Additional_Information = value;
             }
         }
+       
     }
 }
