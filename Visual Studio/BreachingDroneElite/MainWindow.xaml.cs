@@ -95,7 +95,7 @@ namespace BreachingDroneElite
                  DataLayer.SQLQuery("INSERT INTO face (id, Naam, Team, img) " +
                                    "VALUES('" + ID + "', '" + Naam + "', '" + Team + "', '" + imageString + "')");
                 savedImageCount++;
-                DataLayer.SQLQuery("SELECT * FROM face");
+                DataLayer.SQLQuery("SELECT Count(img) FROM face");
             }
             catch
             {
