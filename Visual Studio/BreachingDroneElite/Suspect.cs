@@ -13,7 +13,6 @@ namespace BreachingDroneElite
         private string _Utility;
         private string _Priority;
         private string _Additional_Information;
-        //public enum _Priority {Alpha, Bravo, Charlie, Delta};
 
         public Suspect(string Name, string Weapon, string Utility, string priority, string info)
         {
