@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BreachingDroneElite"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="154.403" Width="255.53">
+        Title="LoginWindow" Height="154.403" Width="300.492">
     <Grid Margin="0,0,0,-0.2">
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="220" Margin="10,34,0,0"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="220" Margin="10,62,0,0"/>
-        <Button x:Name="LoginBTN" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="155,96,0,0" Click="LoginBTN_Click"/>
+        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Margin="64,30,0,0" GotFocus="TextBox_GotFocus" TabIndex="2147483645"/>
+        <Button x:Name="LoginBTN" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="209,92,0,0" Click="LoginBTN_Click"/>
         <Label x:Name="BDE" Content="BDE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontFamily="Rockwell"/>
-        <Label x:Name="IncorrectPass" Content="" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.495,-0.625"/>
+        <Label x:Name="IncorrectPass" Content="" HorizontalAlignment="Left" Margin="64,81,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.495,-0.625"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="64,64,0,0" VerticalAlignment="Top" Width="220" Height="23" TabIndex="2147483646"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="2,63,0,0" VerticalAlignment="Top"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="-2,29,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

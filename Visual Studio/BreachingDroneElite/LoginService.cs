@@ -8,8 +8,8 @@ namespace BreachingDroneElite
 {
     class LoginService
     {
-        public static string hashedPassword = "?iv??A???M???g??s?K??o*?H?";
-       
+        private static string _userName = "admin";
+        private static string _hashedPassword = "?iv??A???M???g??s?K??o*?H?";
         public static String EncryptPassword(string password)
             {
             byte[] data = System.Text.Encoding.ASCII.GetBytes(password);
@@ -17,15 +17,32 @@ namespace BreachingDroneElite
             String hash = System.Text.Encoding.ASCII.GetString(data);
             return hash;
         }
-        public static void WindowOpenClose()
+        public static void WindowOpen()
         {
-           
             var mw = new MainWindow();
             mw.Show();
-
-           
-
-
+        }
+        public static string hashedPassword
+        {
+            get
+            {
+                return _hashedPassword;
+            }
+            set
+            {
+                _hashedPassword = value;
+            }
+        }
+        public static string userName
+        {
+            get
+            {
+                return _userName;
+            }
+            set
+            {
+                _userName = value;
+            }
         }
     }
 }

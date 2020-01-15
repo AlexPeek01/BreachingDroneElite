@@ -26,16 +26,26 @@ namespace BreachingDroneElite
 
         private void LoginBTN_Click(object sender, RoutedEventArgs e)
         {
-            if (LoginService.EncryptPassword(Password.Text) == LoginService.hashedPassword)
+            if (LoginService.EncryptPassword(Password.Password) == LoginService.hashedPassword && LoginService.userName == UsernameTextbox.Text)
             {
-                LoginService.WindowOpenClose();
+                LoginService.WindowOpen();
                 this.Close();
             }
             else
             {
-                IncorrectPass.Content = "Incorrect Password";
+                IncorrectPass.Content = "Incorrect credentials";
                 
             }
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            UsernameTextbox.Text = "";
+        }
+
+        private void Password_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Password.Password = "";
         }
     }
 }
