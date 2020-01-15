@@ -16,8 +16,8 @@ namespace BreachingDroneElite
         public static int userCount;
         public static void SQLQuery(string query)
         {
-            string connStr = "server=192.168.12.10;user=root;database=facedb;port=3306;password=TheytoOkEr4Jobs!";
-            //string connStr = "server=192.168.12.13;user=bde;database=facedb;port=5432;password=bde";
+            //string connStr = "server=192.168.12.10;user=root;database=facedb;port=3306;password=TheytoOkEr4Jobs!";
+            string connStr = "server=192.168.12.13;user=bde;database=facedb;port=5432;password=bde";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
