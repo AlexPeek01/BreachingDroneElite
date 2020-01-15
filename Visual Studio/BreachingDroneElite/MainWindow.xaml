@@ -17,11 +17,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://i.gyazo.com/a5d0f9a2420474e065434995d9db7b7e.png" Stretch="UniformToFill" Opacity="0.99"/>
         </Grid.Background>
-        <Button x:Name="CaptureButton" Content="Capture photo (C)" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="CaptureButton_Click"/>
-        <Button x:Name="ClearImagesButton" Content="B D E" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click"/>
-        <Button x:Name="Start_BTN" Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Start_BTN_Click"/>
-        <Button x:Name="Pause_BTN" Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Pause_BTN_Click"/>
-        <Button x:Name="Stop_BTN" Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Foreground="Black" Click="Stop_BTN_Click"/>
+        <Button x:Name="CaptureButton" Content="Capture photo" HorizontalAlignment="Left" Margin="350,127,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="CaptureButton_Click" Background="Black" Foreground="#FFFF9300" FontWeight="Bold"/>
+        <Button x:Name="ClearImagesButton" Content="B D E" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Button_Click" Background="Black" FontWeight="Bold" Foreground="#FFFF9300"/>
+        <Button x:Name="Start_BTN" Content="Start Videofeed" HorizontalAlignment="Left" Margin="113,300,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="Start_BTN_Click" Background="Black" Foreground="#FFFF9300" FontWeight="Bold"/>
+        <Button x:Name="Pause_BTN" Content="Pause" HorizontalAlignment="Left" Margin="218,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Pause_BTN_Click" Background="Black" Foreground="#FFFF9300" FontWeight="Bold"/>
+        <Button x:Name="Stop_BTN" Content="Stop" HorizontalAlignment="Left" Margin="58,300,0,0" VerticalAlignment="Top" Height="50" Width="50" Foreground="#FFFF9300" Click="Stop_BTN_Click" Background="Black" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="470,600,0,-255.2" TextWrapping="Wrap" Text="AIG" VerticalAlignment="Top"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="-15,318,0,-57.2" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
@@ -35,7 +35,7 @@
         </Separator>
         <Image x:Name="imagebox" HorizontalAlignment="Left" Height="206" Margin="27,38,0,0" VerticalAlignment="Top" Width="297"/>
         <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="350,254,0,0" TextWrapping="Wrap" Text="SELECT * FROM face" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="375,225,0,0" Click="CNFRM_BTN"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Margin="369,223,0,0" Click="CNFRM_BTN" Background="Black" Foreground="#FFFF9300" FontWeight="Bold" Height="21"/>
 
 
 
