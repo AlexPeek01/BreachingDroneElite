@@ -310,3 +310,5 @@ C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj
 C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.csproj.GenerateResource.cache
 C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.csproj.CoreCompileInputs.cache
 C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\BreachingDroneElite.csproj.CopyComplete
+C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\LoginWindow.g.cs
+C:\Users\danil\Desktop\BreachingDroneElite\Visual Studio\BreachingDroneElite\obj\Debug\LoginWindow.baml

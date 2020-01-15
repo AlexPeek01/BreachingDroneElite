@@ -148,10 +148,18 @@
     <Compile Include="Civilian.cs" />
     <Compile Include="DataLayer.cs" />
     <Compile Include="File_Services.cs" />
+    <Compile Include="LoginService.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MediaControl.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Suspect.cs" />
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

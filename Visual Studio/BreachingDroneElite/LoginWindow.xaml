@@ -1,0 +1,17 @@
+﻿<Window x:Class="BreachingDroneElite.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BreachingDroneElite"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="154.403" Width="255.53">
+    <Grid Margin="0,0,0,-0.2">
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="220" Margin="10,34,0,0"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="220" Margin="10,62,0,0"/>
+        <Button x:Name="LoginBTN" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="155,96,0,0" Click="LoginBTN_Click"/>
+        <Label x:Name="BDE" Content="BDE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontFamily="Rockwell"/>
+        <Label x:Name="IncorrectPass" Content="" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.495,-0.625"/>
+
+    </Grid>
+</Window>
