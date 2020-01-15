@@ -28,9 +28,8 @@ namespace BreachingDroneElite
 {
     public partial class MainWindow : Window
     {
-        private int team;
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
-
+        private List<Room> rooms = new List<Room>();
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +42,8 @@ namespace BreachingDroneElite
         {
             Startup();
             File_Services.DeleteFile();
+            Room room1 = new Room("Room1", 0, "Unknown", "");
+            rooms.Add(room1);
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {

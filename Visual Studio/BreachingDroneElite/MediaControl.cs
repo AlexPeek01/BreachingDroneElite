@@ -16,6 +16,6 @@ namespace BreachingDroneElite
         public static void MediaPause()
         {
 
-        }
     }
+}
 }

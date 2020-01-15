@@ -33,7 +33,6 @@ namespace BreachingDroneElite
                 }
                 userCount = rdr.GetInt32(0);
                 rdr.Close();
-
             }
             catch (Exception ex)
             {
