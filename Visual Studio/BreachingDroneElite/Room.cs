@@ -8,10 +8,11 @@ namespace BreachingDroneElite
 {
     class Room
     {
-        string _RoomName;
-        int _PersonCount;
-        string _DangerLevel;
-        string _Additional_Info;
+        private string _RoomName;
+        private int _PersonCount;
+        private string _DangerLevel;
+        private string _Additional_Info;
+        List<Civilian> civilians = new List<Civilian>();
         public Room(string RoomName, int PersonCount, string Dangerlevel, string Info)
         {
         }
