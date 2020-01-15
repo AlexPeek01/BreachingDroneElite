@@ -39,11 +39,6 @@ namespace BreachingDroneElite
                 Console.WriteLine(ex.ToString());
             }
             conn.Close();
-            Console.WriteLine("Done.");
-        }
-        private void llOpenConnAndSelect_LinkClicked(object sender,
-             LinkLabelLinkClickedEventArgs e)
-        {
         }
     }
 }

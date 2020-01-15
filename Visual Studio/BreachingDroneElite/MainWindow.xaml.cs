@@ -36,19 +36,20 @@ namespace BreachingDroneElite
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            File_Services.DeleteFile();
+            //File_Services.DeleteFile();
+
         }
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             Startup();
-            File_Services.DeleteFile();
+            //File_Services.DeleteFile();
             Room room1 = new Room("Room1", 0, "Unknown", "");
             rooms.Add(room1);
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            File_Services.ImageInit();
-            imagebox.Source = File_Services.finalImage;
+            //File_Services.ImageInit();
+            //imagebox.Source = File_Services.finalImage;
 
         }
         private void CaptureButton_Click(object sender, RoutedEventArgs e)
@@ -78,7 +79,9 @@ namespace BreachingDroneElite
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 30);
             dispatcherTimer.Start();
-            File_Services.DeleteFile();
+            //File_Services.DeleteFile();
+
+           
         }
     }
 }
