@@ -13,6 +13,8 @@ namespace BreachingDroneElite
         private string _DangerLevel;
         private string _Additional_Info;
         List<Civilian> civilians = new List<Civilian>();
+        List<Operator> operators = new List<Operator>();
+        List<Suspect> suspects = new List<Suspect>();
         public Room(string RoomName, int PersonCount, string Dangerlevel, string Info)
         {
         }
