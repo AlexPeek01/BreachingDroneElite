@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="LoginWindow" Height="154.403" Width="300.492">
     <Grid Margin="0,0,0,-0.2">
-        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Margin="64,30,0,0" GotFocus="TextBox_GotFocus" TabIndex="2147483645"/>
+        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Margin="64,30,0,0" TabIndex="2147483645"/>
         <Button x:Name="LoginBTN" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="209,92,0,0" Click="LoginBTN_Click"/>
         <Label x:Name="BDE" Content="BDE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontFamily="Rockwell"/>
         <Label x:Name="IncorrectPass" Content="" HorizontalAlignment="Left" Margin="64,81,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.495,-0.625"/>
