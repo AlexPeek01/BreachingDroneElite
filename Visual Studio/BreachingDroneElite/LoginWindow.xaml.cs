@@ -37,15 +37,5 @@ namespace BreachingDroneElite
                 
             }
         }
-
-        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            UsernameTextbox.Text = "";
-        }
-
-        private void Password_GotFocus(object sender, RoutedEventArgs e)
-        {
-            Password.Password = "";
-        }
     }
 }

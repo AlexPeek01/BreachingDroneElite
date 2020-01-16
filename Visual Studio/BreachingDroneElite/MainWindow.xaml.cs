@@ -41,6 +41,7 @@ namespace BreachingDroneElite
         }
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
+            File_Services.DeleteFile();
             Startup();
             Room room1 = new Room("Room1", 0, "Unknown", "");
             rooms.Add(room1);
@@ -49,7 +50,6 @@ namespace BreachingDroneElite
         {
             File_Services.ImageInit();
             imagebox.Source = File_Services.finalImage;
-
         }
         private void CaptureButton_Click(object sender, RoutedEventArgs e)
         {
@@ -78,7 +78,6 @@ namespace BreachingDroneElite
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 30);
             dispatcherTimer.Start();
-            File_Services.DeleteFile();
 
            //EASTEREGG
         }
